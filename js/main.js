@@ -5,11 +5,39 @@ var elInputType = document.querySelector("[data-type]");
 var elInputWeight = document.querySelector("[data-weight]");
 var elInputHeight = document.querySelector("[data-height]");
 var elDivWrap = document.querySelector("[data-div-wrap]");
-var elDivCard = document.querySelector("[data-div-card]");
 
-for (var i = 0; i < pokemons.length; i++) {
-  var pokemon = pokemons[i];
+elForm.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+  var pokemon = {
+    name: null,
+    img: null,
+    type: [],
+    weight: null,
+    height: null,
+  };
+  pokemon.name = elInputName.value;
+  pokemon.img = elInputImg.value;
+  pokemon.type = elInputType.value.split(",");
+  pokemon.weight = elInputWeight.value;
+  pokemon.height = elInputHeight.value;
 
+  pokemons.unshift(pokemon);
+
+  elDivWrap.prepend(createDiv(pokemon));
+});
+
+renderPokemons();
+
+function renderPokemons() {
+  for (var i = 0; i < pokemons.length; i++) {
+    var pokemon = pokemons[i];
+
+    elDivWrap.append(createDiv(pokemon));
+  }
+}
+
+function createDiv(pokemon) {
+  var elDivCard = document.createElement("div");
   var elImg = document.createElement("img");
   var elDivBody = document.createElement("div");
   var elh5 = document.createElement("h5");
@@ -27,14 +55,19 @@ for (var i = 0; i < pokemons.length; i++) {
   elSpan1.textContent = `${pokemon.height}`;
   elBtn.textContent = "Delate";
 
+  elDivCard.classList.add("card");
   elImg.classList.add("card-img-top");
   elDivBody.classList.add("card-body");
   elBtn.classList.add("btn-danger");
+  elSpan.classList.add("span");
+
+  // elBtn.delateRow(elDivCard);
 
   elh6.append(elSpan, elSpan1);
   elDivBody.append(elh5, elP, elh6, elBtn);
   elDivCard.append(elImg, elDivBody);
-  // elDivWrap.append(elDivCard);
+
+  return elDivCard;
 }
 
 function joinArray(arr, separator = "") {

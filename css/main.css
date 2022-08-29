@@ -15,12 +15,24 @@ body {
   border: 1.8px solid black;
   padding-left: 15px;
 }
+@media (max-width: 760px) {
+  .el-input {
+    width: 200px;
+    margin-top: 20px;
+  }
+}
 
 .el-btn {
   width: 120px;
   border-radius: 8px;
   height: 35px;
   border: 1.8px solid black;
+}
+@media (max-width: 760px) {
+  .el-btn {
+    width: 200px;
+    margin-top: 20px;
+  }
 }
 
 .card {
@@ -31,8 +43,19 @@ body {
 .wrap {
   flex-wrap: wrap;
   justify-content: center;
+  gap: 50px;
+  margin-top: 80px;
 }
 
 .btn-danger {
   width: 10rem;
+}
+
+.span {
+  padding-right: 20px;
+}
+
+.card-img-top {
+  border-bottom: 1.8px solid black;
+  height: 10rem;
 }/*# sourceMappingURL=main.css.map */
