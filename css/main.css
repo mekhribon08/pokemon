@@ -31,4 +31,8 @@ body {
 .wrap {
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.btn-danger {
+  width: 10rem;
 }/*# sourceMappingURL=main.css.map */
