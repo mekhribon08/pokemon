@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffd845;
+}
+
+.el-input {
+  width: 130px;
+  height: 35px;
+  border-radius: 10px;
+  border: 1.8px solid black;
+  padding-left: 15px;
+}
+
+.el-btn {
+  width: 120px;
+  border-radius: 8px;
+  height: 35px;
+  border: 1.8px solid black;
+}
+
+.card {
+  border-radius: 16px;
+  border: 1.9px solid black;
+}
+
+.wrap {
+  flex-wrap: wrap;
+  justify-content: center;
+}
