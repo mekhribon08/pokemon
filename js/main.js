@@ -28,7 +28,6 @@ for (var i = 0; i < pokemons.length; i++) {
   elBtn.textContent = "Delate";
 
   elDivBody.append(elImg);
-  elLi.append(elDiv);
   elP1.append(elSpan, elSpan1);
   elDivBody.append(elh5, elP, elP1, elBtn);
   elDivCard.append(elImg, elDivCard);
