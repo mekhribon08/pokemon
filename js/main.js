@@ -21,6 +21,12 @@ elForm.addEventListener("submit", function (evt) {
   pokemon.weight = elInputWeight.value;
   pokemon.height = elInputHeight.value;
 
+  elInputImg.value = "";
+  elInputName.value = "";
+  elInputType.value = "";
+  elInputWeight.value = "";
+  elInputHeight.value = "";
+
   pokemons.unshift(pokemon);
 
   elDivWrap.prepend(createDiv(pokemon));
@@ -60,15 +66,20 @@ function createDiv(pokemon) {
   elDivBody.classList.add("card-body");
   elBtn.classList.add("btn-danger");
   elSpan.classList.add("span");
-
-  // elBtn.delateRow(elDivCard);
-
   elh6.append(elSpan, elSpan1);
   elDivBody.append(elh5, elP, elh6, elBtn);
   elDivCard.append(elImg, elDivBody);
 
   return elDivCard;
 }
+
+// const close = document.querySelectorAll("button");
+// for (let i = 0; i < close.length; i++) {
+//   close[i].addEventListener("click", () => {
+//     close[i].parentElement.style.display = "none";
+//     close[i].parentElement.remove();
+//   });
+// }
 
 function joinArray(arr, separator = "") {
   var str = "";
