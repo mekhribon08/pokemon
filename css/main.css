@@ -58,4 +58,6 @@ body {
 .card-img-top {
   border-bottom: 1.8px solid black;
   height: 10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=main.css.map */

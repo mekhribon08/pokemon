@@ -56,7 +56,7 @@ function createDiv(pokemon) {
   elImg.src = `${pokemon.img}`;
   elImg.alt = pokemon.title;
   elh5.textContent = `${pokemon.name}`;
-  elP.textContent = joinArray([pokemon.type]);
+  elP.textContent = joinArray(pokemon.type);
   elSpan.textContent = `${pokemon.weight}`;
   elSpan1.textContent = `${pokemon.height}`;
   elBtn.textContent = "Delate";
