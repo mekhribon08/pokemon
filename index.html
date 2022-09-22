@@ -73,6 +73,14 @@
         type="search"
         placeholder="Search"
       />
+      <label for="type-search"></label>
+      <input
+        class="el-input"
+        id="type-search"
+        data-type-search
+        type="type-search"
+        placeholder="Type search"
+      />
     </form>
 
     <div data-div-wrap class="wrap d-flex">
@@ -95,6 +103,21 @@
         </div>-->
       <!-- </div> -->
     </div>
+
+    <template data-template-card>
+      <div class="card">
+        <img class="card-img-top" />
+        <div class="card-body">
+          <h5 data-card-title></h5>
+          <p data-card-type></p>
+          <h6>
+            <span class="span" data-card-weight></span>
+            <span data-card-height></span>
+          </h6>
+          <button data-card-delate class="btn-danger">Delate</button>
+        </div>
+      </div>
+    </template>
 
     <script src="./js/pokemon.js"></script>
     <script src="./js/main.js"></script>
