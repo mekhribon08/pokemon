@@ -8,6 +8,7 @@ var elDivWrap = document.querySelector("[data-div-wrap]");
 var elInputSearch = document.querySelector("[data-search]");
 var elTemplateCard = document.querySelector("[data-template-card]");
 var elTypeSearchInput = document.querySelector("[data-type-search]");
+var elSelectType = document.querySelector("[data-select]");
 
 elForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
@@ -40,7 +41,7 @@ renderPokemons(pokemons);
 
 function renderPokemons(pPokemons) {
   elDivWrap.innerHTML = "";
-  pPokemons.forEach((pokemon) => elDivWrap.append(createDiv(pokemon)));
+  pPokemons.filter((pokemon) => elDivWrap.append(createDiv(pokemon)));
 }
 
 function createDiv(pokemon) {
@@ -67,7 +68,12 @@ function createDiv(pokemon) {
 
 elInputSearch.addEventListener("keyup", (evt) => {
   var newPokemons = [];
-  pokemons.forEach((pokemon) => {
+  // pokemons.forEach((pokemon) => {
+  //   if (pokemon.name.includes(elInputSearch.value)) {
+  //     newPokemons.push(pokemon);
+  //   }
+  // });
+  pokemons.filter((pokemon) => {
     if (pokemon.name.includes(elInputSearch.value)) {
       newPokemons.push(pokemon);
     }
@@ -80,7 +86,7 @@ renderPokemons(pokemons);
 
 elTypeSearchInput.addEventListener("keyup", (evt) => {
   var newPokemons = [];
-  pokemons.forEach((pokemon) => {
+  pokemons.filter((pokemon) => {
     if (pokemon.type.includes(elTypeSearchInput.value)) {
       newPokemons.push(pokemon);
     }
@@ -100,3 +106,5 @@ function joinArray(arr, separator = "") {
   }
   return str;
 }
+
+
