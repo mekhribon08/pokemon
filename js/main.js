@@ -95,6 +95,14 @@ elTypeSearchInput.addEventListener("keyup", (evt) => {
   renderPokemons(newPokemons);
 });
 
+elSelectType.addEventListener("change", (evt) => {
+  const option = pokemons.filter((pokemon) =>
+    pokemon.type.includes(elSelectType.value)
+  );
+
+  renderPokemons(option);
+});
+
 function joinArray(arr, separator = "") {
   var str = "";
   for (let i = 0; i < arr.length; i++) {
@@ -106,5 +114,3 @@ function joinArray(arr, separator = "") {
   }
   return str;
 }
-
-
