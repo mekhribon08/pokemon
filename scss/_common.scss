@@ -49,10 +49,6 @@ body {
   margin-top: 80px;
 }
 
-.btn-danger {
-  width: 10rem;
-}
-
 .span {
   padding-right: 20px;
 }
@@ -61,4 +57,33 @@ body {
   border-bottom: 1.8px solid black;
   height: 10rem;
   object-fit: contain;
+}
+
+.my-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px dashed #fff;
+  z-index: 100;
+  background: rgba(24, 22, 22, 0.1);
+  backdrop-filter: blur(5px);
+  display: none;
+
+  &.show {
+    display: flex;
+  }
+}
+
+.my-modal__content {
+  max-width: 500px;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.btn-close {
+  display: flex;
+  justify-content: flex-end;
 }

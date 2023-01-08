@@ -98,6 +98,13 @@
         type="type-search"
         placeholder="Type search"
       />
+      <button
+        data-modal-open="#test-modal"
+        type="button"
+        class="btn btn-light el-btn"
+      >
+        Modal
+      </button>
     </form>
 
     <div data-div-wrap class="wrap d-flex">
@@ -131,10 +138,18 @@
             <span class="span" data-card-weight></span>
             <span data-card-height></span>
           </h6>
-          <button data-card-delate class="btn-danger">Delate</button>
+          <button data-card-add class="btn btn-success w-100 mt-2">Add</button>
+          <button data-card-delate class="btn-danger w-100 mt-2">Delate</button>
         </div>
       </div>
     </template>
+
+    <div class="my-modal" id="test-modal" data-modal>
+      <div class="my-modal__content" data-model-content>
+        <button class="btn btn-close" data-modal-close></button>
+        <div data-favourites-list></div>
+      </div>
+    </div>
 
     <script src="./js/pokemon.js"></script>
     <script src="./js/main.js"></script>
