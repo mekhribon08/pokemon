@@ -9,7 +9,7 @@ body {
 }
 
 .el-input {
-  width: 130px;
+  width: 150px;
   height: 35px;
   border-radius: 10px;
   border: 1.8px solid black;
@@ -23,7 +23,7 @@ body {
 }
 
 .el-btn {
-  width: 120px;
+  width: 130px;
   border-radius: 8px;
   height: 35px;
   border: 1.8px solid black;
@@ -33,6 +33,10 @@ body {
     width: 200px;
     margin-top: 20px;
   }
+}
+
+.search {
+  margin-top: 20px;
 }
 
 .card {

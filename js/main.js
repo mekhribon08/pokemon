@@ -9,6 +9,8 @@ var elInputSearch = document.querySelector("[data-search]");
 var elTemplateCard = document.querySelector("[data-template-card]");
 var elTypeSearchInput = document.querySelector("[data-type-search]");
 var elSelectType = document.querySelector("[data-select]");
+var elAl = document.querySelector("[data-alpha]");
+var elOption = document.querySelector("[data-option]");
 
 elForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
@@ -101,6 +103,24 @@ elSelectType.addEventListener("change", (evt) => {
   );
 
   renderPokemons(option);
+});
+
+elAl.addEventListener("change", (evt) => {
+  const optionn = pokemons.sort(
+    (a, b) =>
+      a.name.toLowerCase().charCodeAt() - b.name.toLowerCase().charCodeAt()
+  );
+
+  renderPokemons(optionn);
+});
+
+elAl.addEventListener("change", (evt) => {
+  const optionnn = pokemons.sort(
+    (a, b) =>
+      b.name.toLowerCase().charCodeAt() - a.name.toLowerCase().charCodeAt()
+  );
+
+  renderPokemons(optionnn);
 });
 
 function joinArray(arr, separator = "") {
